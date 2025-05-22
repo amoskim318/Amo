@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <meta name="keywords" content="Document" />
+
+        <meta name="description" content="Your Description..." />
+
+        <title>Document</title>
+
+        <link
+
+            rel="stylesheet"
+
+            href="/resources/swiper-js/swiper-bundle.min.css" />
+
+        <link
+
+            rel="stylesheet"
+
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+        <link rel="stylesheet" href="/resources/css/loader.css" />
+
+        <link rel="stylesheet" href="/resources/css/hamburger.css" />
+
+        <link rel="stylesheet" href="/resources/css/home.css" />
+
+        <link rel="stylesheet" href="/resources/css/about.css" />
+
+        <link rel="stylesheet" href="/resources/css/services.css" />
+
+        <link rel="stylesheet" href="/resources/css/portfolio.css" />
+
+        <link rel="stylesheet" href="/resources/css/comments.css" />
+
+        <link rel="stylesheet" href="/resources/css/contact.css" />
+
+        <link href="/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="/resources/css/style.css" />
+
+        <link
+
+            rel="shortcut icon"
+
+            href="/resources/img/favicon.ico"
+
+           type="image/x-icon" />
+
+        <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color:;
+      opacity:5;
+      display:flex;
+            height:2300px;
+    }
+
+    /* Drawer button */
+    .drawer-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      background-color:white;
+      color: red;
+        color: blue;
+      color:black;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .drawer-btn span {
+      font-size: 30px;
+      line-height:1 ;
+    }
+
+    /* Drawer container */
+    .drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color:#000000;
+      color: white;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      padding: 20px;
+      z-index: 999;
+      border:3px solid red;
+      overdflow:hidden;
+    }
+
+    .drawer.open {
+      transform: translateX(0);
+    }
+
+    /* Drawer content */
+    .drawer h2 {
+      margin-top: 8;
+      color: #00ffff;
+    }
+
+    .drawer a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 60px;
+      transition: background-color 0.3s ease;
+    }
+
+    .drawer a:hover {
+      background-color: #444;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: ;
+      left: 100px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 998;
+    }
+
+    .facebook.active {
+      display: block;
+    }
+ 
+  #demo{
+    position:relative;
+    
+    color:#00ff00;
+  }
+  #mom{
+    color:#00ff00;
+  }
+  #sit{
+    color:#00ff00;
+  }
+  #test{
+    color:#00ff00;
+  }
+  #test1{
+    color:#00ff00;
+  }
+  #test2{
+    color:#00ff00;
+  }
+  #test3{
+    color:#00ff00;
+  }
+  #test4{
+    color:#00ff00;
+  }
+  #test5{
+    color:#00ff00;
+  }
+  .hello{
+    color:#00ff00;
+  }
+       .button{
+    background-color:blue;
+    display:flex;
+    over-flow:hidden;
+    border:3px solid #ff00ff;
+  }
+  button:hover{
+    background:linear-gradient(360deg,#000000,#ffff00);
+    inset:5;
+  }
+  #test6{
+    color:#00ff00;
+  }
+  #about5{
+    color:#00ff00;
+  }
+        img{
+            position:relative;
+            width:100%; 
+            height:200px;
+            top:60px;
+            border-radius:10px;
+            margin-left:px;
+            margin-top:80px;
+          
+        }
+        .insi{
+            color:dodgerblue;
+            text-align:center;
+            width:300px;
+            height:300px;
+            background-color:blue;
+            margin-left:220px;
+            padding-top:20px;
+            border-radius:20px;
+            border:3px solid red;
+        }
+        .in{
+            width:400px;
+            height:500px;
+            background-color:whitesmoke;
+            place-content:center;
+    justify-content:center;
+           place-item:center;
+            text-align:center;
+            left:200px;
+            position:absolute;
+        }
+        submit{
+            background-color:green;
+        }
+        body {
+      background: #fff;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: #222;
+      color: #fff;
+    }
+    #darkModeToggle {
+      margin-bottom:10px;
+      padding: 3px 10px;
+      cursor: pointer;
+    }
+        ody{
+      font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.dropdown {
+    position:relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.selected-fruit {
+    margin-top: 20px;
+    font-size: 20px;
+}
+   .move{
+       width:200px;
+       height:200px;
+       background-color:blue;
+       text-align:center;
+       justify-content:center;
+       place-content:center;
+       font-size:50px;
+        animation:myName;
+    animation-duration:5s;
+    animation-iteration-count: infinite
+       transform:skewY(40deg);
+       transform:skewx(45deg); 
+       top:300px;
+       
+   } 
+      @keyframes myName{
+          from{
+              margin-left:100%;
+          }
+          to{
+              margin-left:0%;
+          }
+      } 
+.appl{
+    font-size:50px;
+   display:flex;
+    width:30px;
+    
+}        
+ </style>
+    </head>
+<body>
+    <script>
+  function myFunction(){
+document.getElementById("demo").innerHTMl=("hwlljhffgggddhjsjdhsjdgfhfhdudhdufhdgdodhfydhryjggg");
+  }
+</script>
+  <!-- Drawer Button -->
+  <button class="drawer-btn" onclick="toggleDrawer()">
+    <span>&#9776;</span> <!-- Unicode for the "hamburger" menu icon -->
+  </button>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <h2><footer>2025 &copy; AMOS KIM Dev.Team </footer></h2>
+<button style="font-size:13px;padding-top:7px;" type="button" onclick="myFunction()">WHITE HACKING</button>
+  <p id="demo"></p>
+  <script>
+  function myFunction (){
+    document.getElementById("demo").innerHTML=("<p>Nmap</p>Metasploit<p>Airclack-Ng</p>Wireshark<p></p>open VAS<p>SQLmap</p>NetStumber<p>EttetCap</p><p>maltego</p><p>nikto</p><p>Burp suit</p><p>John The Ripper</p><p>Angry Ip Scanner</p><p>Acunetix</p><p>Invicti(formerly NetSpark)</p><p>intruder</p><p>Remcos conclusion</p>");
+  }
+  </script>
+    <button style="padding:3px 20px;"type="button" onclick="myFuncti()">BLACKHAT</button>
+    <P id="mom"></P>
+    <script>
+    function myFuncti(){
+      document.getElementById("mom").innerHTML=("<d2>HACKING TOOLS</d2><p>hacking</p>");
+    }
+    </script>
+    <button style="padding:3px 24px;" type="button" onclick="myFunctio()">HOSTING</button>
+  <p id="sit"></p>
+  <script>
+  function myFunctio (){
+    document.getElementById("sit").innerHTML=("<p>UNLIMITED SSH</p><p>did.ecitizen.go.ke</p><header>CAPPED HOST</header><p>ncpwd.fuzu.com</p><p>betika.com</p><p>coregateway.app.dlight.com <header>AIRTEL</header><p>viton.com</p><p>104.18.8.127</p></p>");
+  }
+  </script>
+     <button style="padding:3px 9px;" type="button" onclick="kenya()">CERTIFICATION</button>
+  <p id="test"></p>
+  <script>
+  function kenya (){
+    document.getElementById("test").innerHTML=("<p>CEH</p>GIAC<p>OSCP</p>CREST<p></p>");
+  }
+  </script>
+    <button style="padding:4px 5px; font-size:10px;" type="button" onclick="kenya1()">Software Testing Tools</button>
+    <P id="test1"></P>
+    <script>
+    function kenya1(){
+      document.getElementById("test1").innerHTML=("<p>Test Management Tools</p><p>Cross Browser Testing Tools</p><p>Best ETL Testing Tools</p><p>Mobile Testing Tools</p><p>Regression Testing Tools</p><p>Defect Tracking Tools</p><p>GUI Testing Tools</p><p>Requirements Management Tools</p>");
+    }
+    </script>
+    <button style="padding:3px 24px;"type="button" onclick="kenya2()">CARDING</button>
+    <P id="test2"></P>
+    <script>
+    function kenya2(){
+      document.getElementById("test2").innerHTML=("<p>Identity card 30 USDT per Id</p><p>visa card</p>");
+    }
+    </script>
+    <button style="padding:3px 20px;" type="button" onclick="kenya3()">O VPN NET</button>
+    <p id="test3"></p>
+    <script>
+    function kenya3(){
+      document.getElementById("test3").innerHTML=("<p>NORD VPN</p>");
+    }
+    </script>
+    <button style="padding:3px 5px; font-size:12px;" type="button" onclick="kenya4()">UNLOCKING TOOLS</button>
+    <p id="test4"></p>
+    <script>
+    function kenya4(){
+      document.getElementById("test4").innerHTML=("TFT TOOLS <P>MdmFix tools</P><p>Pandora</p><p>XTM ADB Tool v1.2 </p><p>MRT Tool V6.0  With 1 Year Free</p><p>XTM ADB TOOL V1.1  www.firmwarebd.com </p><p> FRP MTK </p><p>XTM MRT 3.95</p>");
+    }
+    </script>
+    <button style="padding:3px 19px;" type="button" onclick="kenya5()">CHATZ ONE</button>
+    <p id="test5"></p>
+    <script>
+    function kenya5(){
+      document.getElementById("test5").innerHTML=("<p>CHAT ZONE</p>");
+    }
+    </script>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+  <div class="content">
+   
+  </div>
+  <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+    <button style="padding:3px 14px;" type="button" onclick="enya6()">ANONYMOUS</button>
+    <p id="tst6"></p>
+    <script>
+    function enya6() {
+      document.getElementById("tst6").innerHTML=("hello their");
+    }
+    </script>
+    <button style="padding:3px 31px;" type="button" onclick="kenya6()">ABOUT</button>
+    <p id="test6"></p>
+    <script>
+    function kenya6() {
+      document.getElementById("test6").innerHTML=("ghhhvvvh");
+    }
+    </script>
+  </div>
+  <!-- Overlay -->
+  <div class="facebook" id="facebook" onclick="toggleDrawer()"></div>
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const facebook = document.getElementById('facebook');
+      drawer.classList.toggle('open');
+      facebook.classList.toggle('active');
+    }
+  </script>
+    <div style="position:absolute;display:flex;margin:24px 55px;font-size:30px;" class="s-icon">
+        <a href="#">
+            <i style="padding:30px;font-size:50px;"class="fa fa-home"></i>
+        </a>
+        <div class="s-name"></div>
+        <div style="display:flex;"class="s-icon">
+            <a href="#">
+                <i style="padding:30px;font-size:50px;" class="fa fa-user-plus"></i>
+            </a>
+            <div class="s-name"></div>
+            <div  style="display:flex;"class="s-icon">
+                <a href="#">
+                    <i style="padding:30px;font-size:50px;" class="fa fa-home"></i>
+                </a>
+                <div class="s-name"></div>
+                <div style="display:flex;position:relative;" class="s-icon">
+                    <a href="#">
+                        <i style="padding:30px;font-size:50px;" class="fa fa-users"></i>
+                       
+                    </a>
+                    <div class="s-name"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+    <div class="asa">
+    <img src="/storage/emulated/0/photo/IMG_20250427_134856.jpg">
+        <p class="abo"></p>
+        <br>
+    </div>
+      
+        <p style="color:red;"><br></p>
+        <p style="color:#ff00ff;text-align:center;"><s><i>ABOUT OURS THE TECH</i></s></p>
+        <table>
+            <tr>
+                <th> 
+<h6 style='text-align:center'><font color="red;" FACE="times new roman">                    
+        <a href="#">
+            <i style="font-size:30px;"class="fa fa-wifi"></i>
+        </a>
+        <p style="width:200px;margin-left:0;position:;">we provode free internet for all of our customers. Thanks for supportng us as the team tech Black TECH i would like to ammend this to our customer that we are  upgrading our social media to  BLACT TECH KIM  WHERE ARE THE FILE WILL BE CHEAP AND AFFORDABLE make your payment early so that you will not have any issual make the payment using this number<details><summary></summary><p>ssh net=250</p><p>v2ray 1month=300sh</p><p></p></details></p>
+                </th>
+                <th>
+                    <a href="#">
+                        <i style="font-size:30px;" class="fa fa-home"></i>
+                    </a>
+                    <h6 style='text-align:center'><font color="red;" FACE="times new roman">                    
+  
+                    <p style="width:300px;">book your files early enough so that the payment will not rise we also sell premium account on netflix so you can account on us the netflix is paid ones per year so you dont have to worry about expeiry the netflix come in upgraded way you can download and save to you local storage it support all the android apart from IOS but we are going to upgrade it</p>
+                </th>
+                <th style="margin:17px;">
+                    <a  href="#">
+                        <i style="font-size:50px;margin:0px;"class="fa fa-phone"></i>
+                    </a>
+                     <h6 style='text-align:center'><font color="red;" FACE="times new roman">                    
+  
+                        <p style="width:200px;">We provide all network accessory our NET is world wide that we even provide calls that last fo longtime they all affordable and cheap if you fell that you have question you can ask on our platform or for more info contact our agent TOP BOY </p>
+                         <a href="https://amoskim028@gmail.com" target="_blank">this link will direct you to gmail</a>
+                         
+                </th>
+            </tr>
+        </table>
+                        <div class="insi">
+                            <p>BOOK YOUR FILE</p>
+                            <input style="border-radius:10px;text-align:center;padding: 7px 50px; type="email" required="email" placeholder="type your email here ">
+                            <br>
+                            <br>
+                            <input style="border-radius:10px; text-align:center;padding:7px 50px;" type="password" required="password" placeholder="type your password">
+                            <br>
+                            <br>
+                            <button style="padding:10px 50px;border-radius:20px;" type="button">log in</button>
+                            <p>forget password</p>
+                            <p>or</p>
+                            <button style="padding:10px 40px;border-radius:20px;" type="button">create new account</button>
+                        </div> 
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p style="text-align:center;color:dodgerblue;font-size:50px;">THE BLACK TECH SERVICES</p>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th colspan="60px"></th>
+                                <div class="container">
+        <h1>Select Your Server</h1>
+        <div class="dropdown">
+            <button id="dropdownButton" class="dropbtn">Select SERVER</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <a href="#" onclick="selectServer('SSH WEBSOCKET @50 ksh')">SSH WEBSOCKET @50 ksh</a>
+                <a href="#" onclick="selectServer('SLOW DNS @50 ksh')">SLOW DNS @50 ksh</a>
+                <a href="#" onclick="selectServer('V2RAY @50 ksh')">V2RAY @50 ksh</a>
+                <a href="#" onclick="selectServer('vmess @50 ksh ')">VMESS @50 ksh</a>
+                <a href="#" onclick="selectServer('UDP  @50 ksh')">UDP@ 50 ksh</a>
+                <a href="#" onclick="selectserver('ssh TROJAN @50 ksh')">ssh trojan  @50 ksh</a>
+                <a  href="#" onclick="selectServer('Unlimited bandwith @150 ksh')">Unlimited bandwith @50 ksh</a>
+            </div>
+        </div>
+        <div id="selectedServer" class="selected-server"></div>
+    </div>
+                                 <script>
+    function selectServer(fruit) {
+    document.getElementById("selectedServer").innerText = "" + fruit;
+}
+    </script>
+                            </tr>
+                        </table>
+                        <p style="text-align:left;border:4px solid red;width:100px;background:linear-gradient(black,yellow,#ff00ff);">dark web</p>
+                        <img style="border:10px solid blue;" src="/storage/emulated/0/Pictures/facebook/1747752341084.jpg">
+                        <br>
+                        <br>
+                        <br>
+                        <p>fjdjdh</p>
+                        <p style="text-align:center;">our goals is to satsisfy you are in your dream</p>
+                        
+                        <table>
+                            <tr style="display:colum;border:5 solid red;margin:px;" >
+                                <th style="font-style:bold; font-size:20px;width:100px; background-color:red;margin-left:70px;padding-right:100px;padding-top:px; text-align:center;">Software</th>
+                                <th style="padding-right:100px;width:100px;">kali linux</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>We are  responsible of selling software for both marwale we sell all type of attacks <details><summary></summary>djdjsj</details></td>
+                                <td style="width:50px;position:static;">hggj</td>
+                                <td>xhddhssjwdjsjsjsususjqlsjvzhAlanjujlxdh<br>usjanwvwhsuzfdbdhshsusgsgwysysvvizhh</td>
+                            </tr>
+                        </table>
+                        <div class="move">
+                            <p>like and subscribe</p>
+                        </div>
+                       <p style="float:left;">jjjjjkkjjjj</p>
+                        <p style="float-left">jdjdjj</p>
+                        <p>jjj</p>
+                        <table style="background-color:#00ff00;border:5px solid #ff00ff;">
+                            <tr style="color:red;">
+                                <th style="height:30px;width:150px;"   >about us</th>
+                                <th width="150px" >contact us</th>
+                                <th width="150px" >trust safety</th>
+                                <th width="150px" >help and support</th>
+                                <th width="150px" >direct contact us</th>
+                                <th width="150px" > social media platform</th>
+                                <th width="150px" >follow us</th>
+                            </tr>
+                            <td>I am Amos kim<br> an ethoustic software developer with a passionfo
